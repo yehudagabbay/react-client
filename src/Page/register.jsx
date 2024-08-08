@@ -9,27 +9,31 @@ const Register = () => {
     Phone: '',
     Birthday: '',
   });
+  //אוביקט להעברת המשתמש לעמוד אחר לאחר הרישום
   const navigate = useNavigate();
-
+//פונקציה אחת לתפיסת שינויים בטופס
   const handleChange = async (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-      console.log( formData);
-    // Envoyer les données au backend
+    console.log("בדיקה 1")
+    e.preventDefault();// מיותר
+      console.log("בדיקה 2" ,formData);
+    // יצירת חיבור לשרת
     const response = await fetch('http://localhost:5555/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
     });
+    console.log("תגובה מהשרת ", response)
 
     if (response.ok) {
+      console.log("הרישום הצליח")
       navigate('/login');
     } else {
-      console.error('Échec de l\'inscription');
+      console.error('שגיאה בשליחת הנתונים לשרת:', error);
     }
   };
 
