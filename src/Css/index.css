@@ -1,0 +1,76 @@
+
+/* global.css */
+
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  color: #333;
+}
+
+/* Styles pour le conteneur principal */
+div {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Styles pour les liens */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Styles pour les boutons */
+button {
+  color: rgb(83, 5, 5);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styles pour les formulaires */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="date"]::placeholder {
+  color: #999;
+}
+
+/* Styles pour la carte */
+.card {
+  background: rgb(156, 89, 89);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.read-the-docs {
+  color: #888;
+}

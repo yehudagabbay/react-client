@@ -1,0 +1,98 @@
+
+  /* Styles pour la carte */
+  .card {
+    background: rgb(156, 89, 89);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styles spécifiques pour les logos */
+  .logo {
+    height: 40px;
+    margin: 0 10px;
+  }
+  
+  .react {
+    height: 30px;
+  }
+  
+
+/* Styles pour la barre de navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Styles pour les logos */
+.navbar .logo {
+  width: 40px;  /* Ajuste la taille des logos si nécessaire */
+  height: auto;
+}
+
+/* Alignement des logos de Vite et React */
+.navbar div:first-child {
+  display: flex;
+  gap: 15px;  /* Espace entre les logos */
+}
+
+/* Styles pour le logo principal du site */
+.navbar .logo.main {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styles pour les liens de navigation */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;  /* Espace entre les liens */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+/* Styles pour la sélection d'avatar */
+.avatar-selection {
+  margin: 20px 0;
+}
+
+.avatar-gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.avatar-option {
+  width: 60px; /* Ajuste la taille des avatars */
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: border-color 0.3s;
+}
+
+.avatar-option.selected {
+  border-color: #007bff; /* Couleur de la bordure pour l'avatar sélectionné */
+}
+
+.avatar-option:hover {
+  border-color: #0056b3; /* Couleur de la bordure au survol */
+}
