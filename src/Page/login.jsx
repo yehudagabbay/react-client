@@ -14,12 +14,12 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null); // Réinitialiser les erreurs avant de soumettre
+    setError(null); // איפוס השגיאות   
 
     try {
       const response = await fetch('http://localhost:5555/api/users/log', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },//סוג הבקשה 
         body: JSON.stringify(formData),
       });
 
@@ -34,7 +34,8 @@ const Login = () => {
           Birthday: data.Birthday,
           AvatarUrl: data.AvatarUrl,
         };
-        localStorage.setItem('token', data.token);
+        localStorage.setItem('token', data.token); // שמירת טוקן ההתחברות
+        // localStorage.setItem('user_now', JSON.stringify(user));
         localStorage.setItem('UserName', data.user.UserName); 
         localStorage.setItem('Email', data.user.Email);
         localStorage.setItem('user_now', user);
@@ -43,14 +44,14 @@ const Login = () => {
         localStorage.setItem('UserID',data.user.UserID);
 
         console.log(data.user.UserName);
-
+      //הפנית המשתמש לדףהפרופיל
         navigate('/profile');
       } else {
         const errorData = await response.json();
-        setError(errorData.message || 'Échec de la connexion');
+        setError(errorData.message || 'ההתחברות נכשלה');
       }
     } catch (err) {
-      setError('Une erreur s\'est produite. Veuillez réessayer plus tard.'+ err);
+      setError('שגיאה בהתחברות אנא נסה שוב'+ err);
     }
   };
 
